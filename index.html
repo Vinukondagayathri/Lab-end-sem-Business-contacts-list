@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Business Contact List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Business Contact List</h1>
+        <p>Manage your business contacts easily</p>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search contacts..."
+            onkeyup="searchContacts()"
+        >
+
+        <h2>Add New Contact</h2>
+
+        <input type="text" id="name" placeholder="Enter Name">
+        <input type="email" id="email" placeholder="Enter Email">
+        <input type="text" id="address" placeholder="Enter Address">
+        <input type="tel" id="phone" placeholder="Enter Phone Number">
+
+        <button onclick="addContact()">Add Contact</button>
+
+        <h2>Contact Details</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="contactList">
+                <tr>
+                    <td>Rahul Sharma</td>
+                    <td>rahul@gmail.com</td>
+                    <td>Vijayawada</td>
+                    <td>9876543210</td>
+                    <td><button onclick="deleteContact(this)">Delete</button></td>
+                </tr>
+
+                <tr>
+                    <td>Priya Reddy</td>
+                    <td>priya@gmail.com</td>
+                    <td>Guntur</td>
+                    <td>9876543211</td>
+                    <td><button onclick="deleteContact(this)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
